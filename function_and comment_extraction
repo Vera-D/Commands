@@ -1,0 +1,4 @@
+#this will find functions and take the line that follows it
+#grep will find lines with "(defn " and the line that follows it
+#sed will remove defn and the quotes
+grep -A 1 -e '(defn' core.clj | sed "s/(defn//g"|sed 's/"//g'
