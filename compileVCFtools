@@ -1,0 +1,12 @@
+# 1 download mingw
+# 2 add mingw to path
+# 3 add mysyss to path
+$ 4 download zlib https://sourceforge.net/projects/gnuwin32/?source=typ_redirect
+# 4 clone repo
+#get source file for zlib and pthreads
+# copy .c files and .h files to the vcftools directory
+# example of shell command cp **/*.c C:\Users\vera\Desktop\pthread\sendThis
+#in vcftools directory run sh
+#./autoconf.sh
+#./configure
+...
