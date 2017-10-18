@@ -17,9 +17,7 @@
 
 grep -o '".*"' namespaces.txt | sed 's/"//g' > namespacelist_vera.txt
 
- command deconstructed:
+ Documentation on shell commands:
  Ref1: (grep --help) 
  Ref2: http://www.ericagamet.com/wp-content/uploads/2016/04/Erica-Gamets-GREP-Cheat-Sheet.pdf
- -o ->show only the part of a line matching pattern
- . -> wild card - any character
- * ->repeat zero or more times
+ 
