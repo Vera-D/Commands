@@ -1,2 +1,0 @@
-#append all files in a directory into one file
-cat *txt > all.txt
