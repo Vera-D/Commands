@@ -21,7 +21,7 @@ grep -o '".*"' namespaces.txt | sed 's/"//g' > namespacelist_vera.txt
  Ref1: (grep --help) 
  Ref2: http://www.ericagamet.com/wp-content/uploads/2016/04/Erica-Gamets-GREP-Cheat-Sheet.pdf
  
- # Commands to process files within a directory
+ ## Commands to process files within a directory
  append all text files in a directory into one file
  cat *txt > all.txt
 
