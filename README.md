@@ -13,7 +13,7 @@
 4.	Save the output to a file called all-ns.txt
 5.	Open git bash in the directory with the all-ns.txt file and run: 
 
-<font face="Consolas"> grep -E '*dx-prototype*' all-ns.txt | grep -o '".*"'|sed 's/"//g' | sed 's/dx-prototype.//'> prototype-ns.txt
+<font face="Arial"> grep -E '*dx-prototype*' all-ns.txt | grep -o '".*"'|sed 's/"//g' | sed 's/dx-prototype.//'> prototype-ns.txt
  
 grep -o '".*"' namespaces.txt | sed 's/"//g' > namespacelist_vera.txt
 </font>
@@ -21,7 +21,7 @@ grep -o '".*"' namespaces.txt | sed 's/"//g' > namespacelist_vera.txt
 List of functions within each namespace and module was captured as follows: 
 Stepped into each directory using git bash for windows and ran the command: 
 
-<font face="Consolas"> grep -A 1 -e '(defn' [filename] | sed "s/(defn//g"|sed 's/"//g'
+<font face="Arial"> grep -A 1 -e '(defn' [filename] | sed "s/(defn//g"|sed 's/"//g'
 </font>
 
  Documentation on shell commands:
