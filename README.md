@@ -1,4 +1,11 @@
 # shell-commands
+## For Matlab
+Extract comments using:
+grep -e '%%%*' *.m > deleteMe_comments2.txt
+Extract Functions
+grep -e 'function*' *.m
+
+
 ## For Clojure Project
  below are the steps to extract just the namespace from the repl output.
  example of repl output: 
