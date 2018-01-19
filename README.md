@@ -1,9 +1,11 @@
 # shell-commands
 ## For Matlab
 Extract comments using:
+
 grep -e '%%%*' *.m > deleteMe_comments2.txt
 
 Extract Functions:
+
 grep -e 'function*' *.m
 
 
