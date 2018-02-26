@@ -42,3 +42,8 @@ Stepped into each directory using git bash for windows and ran the command:
  append all text files in a directory into one file
  cat *txt > all.txt
 
+
+# this will find functions and take the line that follows it
+# grep will find lines with "(defn " and the line that follows it
+# sed will remove defn and the quotes
+grep -A 1 -e '(defn' core.clj | sed "s/(defn//g"|sed 's/"//g'
