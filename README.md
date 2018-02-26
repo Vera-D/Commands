@@ -28,15 +28,16 @@ sed will remove defn and the quotes
 4.	Save the output to a file called all-ns.txt
 5.	Open git bash in the directory with the all-ns.txt file and run: 
 
-<font face="Arial"> grep -E '*dx-prototype*' all-ns.txt | grep -o '".*"'|sed 's/"//g' | sed 's/dx-prototype.//'> prototype-ns.txt
+<font face="Arial"> 
+grep -E '*dx-prototype*' all-ns.txt | grep -o '".*"'|sed 's/"//g' | sed 's/dx-prototype.//'> prototype-ns.txt
  
 grep -o '".*"' namespaces.txt | sed 's/"//g' > namespacelist_vera.txt
+
 </font>
 
-List of functions within each namespace and module was captured as follows: 
-Stepped into each directory using git bash for windows and ran the command: 
-
-<font face="Arial"> grep -A 1 -e '(defn' [filename] | sed "s/(defn//g"|sed 's/"//g'
+Get the line that follows the function for all functions in a file. Process by stepping into each directory using git bash for windows:
+<font face="Arial"> 
+grep -A 1 -e '(defn' [filename] | sed "s/(defn//g"|sed 's/"//g'
 </font>
 
  Documentation on shell commands:
