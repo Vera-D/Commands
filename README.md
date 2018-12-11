@@ -1,3 +1,18 @@
+# Docker Quickies
+
+## list docker images
+docker image ls
+## list docker containers
+docker ps
+docker ps -a
+## copy files from container to local drive
+1. step into the host directory
+2. run docker cp containerID:<path to file> <newfilename>
+ 
+example: 
+docker cp e6717a8856c6:/usr/src/vera/ShortStack/ShortStack/output/bc_counts.tsv bc_counts2.tsv
+/usr/src/vera/ShortStack/ShortStack/output
+
 # shell-commands
 ## For Matlab
 Extract comments using:
