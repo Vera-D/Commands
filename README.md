@@ -1,4 +1,6 @@
-# Docker Quickies
+# This Repo is a hodgpodge of commands I find useful.
+
+## Docker Quickies
 
 ## list docker images
 docker image ls
