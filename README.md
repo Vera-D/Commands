@@ -14,7 +14,8 @@ docker ps -a
 example: <br>
 docker cp e6717a8856c6:/usr/src/vera/ShortStack/ShortStack/output/bc_counts.tsv bc_counts2.tsv
 /usr/src/vera/ShortStack/ShortStack/output
-
+## save changes to container
+docker commit [container id] [image name]
 # shell-commands
 ## For Matlab
 Extract comments using:
