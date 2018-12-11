@@ -5,6 +5,7 @@
 ## list docker images
 docker image ls
 ## list docker containers
+
 docker ps
 docker ps -a
 ## copy files from container to local drive
