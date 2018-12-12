@@ -1,0 +1,45 @@
+Sub AddNumbersToTable()
+'Adds number value to a word document table. 
+'Numbering is added to the 1st column where the user has added the cursor.
+
+    Dim RowNum As Long
+    Dim colnum As Long
+    Dim J As Integer
+    Dim t_val As Integer
+    
+    Dim numberofcolumns As Variant
+    'start the numbering using this value
+    t_val = 18
+    
+    'Get the table and number of indexes for the cursor
+    Dim numberOfColumnsInCurrentTable As Integer
+    Dim currentTableIndex As Integer
+    
+    currentTableIndex = ActiveDocument.Range(0, Selection.Tables(1).Range.End).Tables.Count
+    numberofcolumns = ActiveDocument.Tables(currentTableIndex).Columns.Count
+    
+    If Not Selection.Information(wdWithInTable) Then
+        MsgBox "Can only run this within a table"
+        Exit Sub
+    End If
+    
+    RowNum = Selection.Cells(1).RowIndex
+    colnum = Selection.Cells(1).ColumnIndex
+    
+
+    For J = RowNum To ActiveDocument.Tables(currentTableIndex).Rows.Count
+    
+        If (t_val < 10) Then
+            ActiveDocument.Tables(currentTableIndex).Cell(J, 1).Range.Text = "REQ-000" & t_val
+            t_val = t_val + 1
+        ElseIf (t_val < 100) Then
+            ActiveDocument.Tables(currentTableIndex).Cell(J, 1).Range.Text = "REQ-00" & t_val
+            t_val = t_val + 1
+        ElseIf (t_val < 1000) Then
+            ActiveDocument.Tables(currentTableIndex).Cell(J, 1).Range.Text = "REQ-0" & t_val
+            t_val = t_val + 1
+        End If
+    
+    Next
+
+End Sub

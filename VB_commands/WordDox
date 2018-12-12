@@ -1,0 +1,74 @@
+Sub AddNumbersToTable()
+'WANT UR-001
+'WANT PR-001
+
+    Dim RowNum As Long
+    Dim ColNum As Long
+    Dim iStartNum As Integer
+    Dim J As Integer
+    
+    Dim t_UR As Variant
+    Dim p_UR As Variant
+
+    Dim t_val As Variant
+    Dim t2_val As Variant
+    Dim t1_val As Variant
+    
+    Dim p_val As Variant
+    
+    Dim iCat As Variant
+    
+    'If Selection.Information(wdWithInTable) Then
+    t_UR = 0
+    p_UR = 0
+    
+        RowNum = Selection.Cells(1).RowIndex
+        ColNum = Selection.Cells(1).ColumnIndex
+        
+
+            For J = RowNum + 1 To ActiveDocument.Tables(1).Rows.Count
+'IS IT A PRODUCT REQ OR USER REQ?
+                t_val = ActiveDocument.Tables(1).Cell(J, 3).Range.Text
+                Debug.Print (ActiveDocument.Tables(1).Cell(J, 3).Range.Text)
+                Debug.Print (t_val = t1_val)
+                
+                If (IsEmpty(t1_val) = True) Then
+                    If (t_val <> t1_val) Then
+                        t1_val = t_val
+                    End If
+                    p_UR = p_UR + 1
+                    ActiveDocument.Tables(1).Cell(J, ColNum).Range.Text = "PR-00" & p_UR
+                ElseIf (t_val = t1_val) Then
+                'its a P REQ
+                    p_UR = p_UR + 1
+                    If (p_UR) < 10 Then
+                        ActiveDocument.Tables(1).Cell(J, ColNum).Range.Text = "PR-00" & p_UR
+                    ElseIf (p_UR) < 100 Then
+                        ActiveDocument.Tables(1).Cell(J, ColNum).Range.Text = "PR-0" & p_UR
+                    Else
+                        ActiveDocument.Tables(1).Cell(J, ColNum).Range.Text = "PR-" & p_UR
+                    End If
+                'End If
+                ElseIf (t_val <> t1_val And IsEmpty(t2_val) And IsEmpty(t_val) = False) Then
+                'its a U REQ
+                    't_val = t2_val
+                    u_UR = u_UR + 1
+                    ActiveDocument.Tables(1).Cell(J, ColNum).Range.Text = "UR-00" & u_UR
+                ElseIf (t_val = t2_val) Then
+                    u_UR = u_UR + 1
+                    If (u_UR) < 10 Then
+                        ActiveDocument.Tables(1).Cell(J, ColNum).Range.Text = "UR-00" & u_UR
+                    ElseIf (u_UR) < 100 Then
+                        ActiveDocument.Tables(1).Cell(J, ColNum).Range.Text = "UR-0" & u_UR
+                    Else
+                        ActiveDocument.Tables(1).Cell(J, ColNum).Range.Text = "UR-" & u_UR
+                    End If
+                End If
+                
+
+                
+            Next
+
+End Sub
+
+
