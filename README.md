@@ -16,7 +16,7 @@ docker cp e6717a8856c6:/usr/src/vera/ShortStack/ShortStack/output/bc_counts.tsv 
 /usr/src/vera/ShortStack/ShortStack/output
 
 ## copy files from local drive to container 
-cp C:/Users/vdiaz/Downloads/blais-snakefood-747c6890354a 61558cdd9828:/usr/src/vera/
+docker cp C:/Users/vdiaz/Downloads/blais-snakefood-747c6890354a 61558cdd9828:/usr/src/vera/
 
 ## save changes to container
 docker commit [container id] [image name]
