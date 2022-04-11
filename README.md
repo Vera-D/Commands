@@ -90,11 +90,12 @@ cat *txt > all.txt
 
 `rename 's/ +\././; y/_/-/; s/(.*?-)/\L$1/' '1_Table_of_Contents.pdf'`
 
-`rename 's/ +\././; y/ /-/; s/(.*?-)/\L$1/' *
+`rename 's/ +\././; y/ /-/; s/(.*?-)/\L$1/' *`
 
 # Change file names case
-rename 'y/A-Z/a-z/' *
 
-rename 'y/a-z/A-Z/' *
+`rename 'y/A-Z/a-z/' *`
+
+`rename 'y/a-z/A-Z/' *`
 `
 
