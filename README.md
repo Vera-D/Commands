@@ -78,6 +78,7 @@ Get the line that follows the function for all functions in a file. Process by s
 
 ## Documentation on shell commands:
 Ref1: (grep --help) 
+
 Ref2: http://www.ericagamet.com/wp-content/uploads/2016/04/Erica-Gamets-GREP-Cheat-Sheet.pdf
  
 ## Commands you can apply to files within a directory
@@ -88,10 +89,12 @@ cat *txt > all.txt
 # Change the file names of files in directory
 
 `rename 's/ +\././; y/_/-/; s/(.*?-)/\L$1/' '1_Table_of_Contents.pdf'`
+
 `rename 's/ +\././; y/ /-/; s/(.*?-)/\L$1/' *
 
 # Change file names case
 rename 'y/A-Z/a-z/' *
+
 rename 'y/a-z/A-Z/' *
 `
 
