@@ -1,6 +1,6 @@
 # Purpose
 
-This Repo is a hodgpodge of commands I find useful.
+This repo contains commands I found useful for creating a docker container that runs NGS open source pipelines.
 
 # Docker Quickies
 
